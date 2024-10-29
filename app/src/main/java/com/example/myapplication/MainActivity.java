@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        SharedPreferences.Editor editor = getSharedPreferences("myPrefs",MODE_PRIVATE);
+        SharedPreferences.Editor editor = getSharedPreferences("myPrefs",MODE_PRIVATE);//hi
 
     }
 }
