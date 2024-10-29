@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         TextView twMessage;
         Button btn = findViewById(R.id.button1);
-        twMessage = findViewById(R.id.textView1);
-        twMessage.setText("hi");
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,5 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        SharedPreferences.Editor editor = getSharedPreferences("myPrefs",MODE_PRIVATE);
+
     }
 }
